@@ -6,7 +6,7 @@ const weatherForm = document.querySelector('form');
         const addressValue = document.getElementById("weatherAddress").value;
         const location = document.getElementById("location");
         const weather = document.getElementById("weather");
-        const url = 'http://localhost:3000/weather?address='+addressValue;
+        const url = '/weather?address='+addressValue;
 
         location.innerText = "Loading...";
         weather.innerText = "";

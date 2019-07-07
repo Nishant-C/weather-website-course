@@ -5,7 +5,8 @@ const hbs = require('hbs')
 const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
 
-const app = expgitress();
+const app = express();
+const port = process.env.PORT || 3000
 
 //Define paths for express config
 const publicDirPath = path.join(__dirname, '../public') 
@@ -93,6 +94,6 @@ app.get('*', (req,res) => {
         img_src: "/img/robot.png"
     });
 })
-app.listen(3000, () => {
-    console.log('server is up on port 3000.')
+app.listen(port, () => {
+    console.log('server is up on port' + port);
 })
